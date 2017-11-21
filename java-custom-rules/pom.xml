@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.sonarsource.samples</groupId>
-	<artifactId>java-custom-rules</artifactId>
+	<groupId>tw.ibm.com</groupId>
+	<artifactId>java-twibm-custom-rules</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>sonar-plugin</packaging>
 
-	<name>SonarQube Java Custom Rules Example</name>
-	<description>Java Custom Rules Example for SonarQube</description>
-	<inceptionYear>2016</inceptionYear>
+	<name>SonarQube Java Custom Rules</name>
+	<description>Java Custom Rules for SonarQube</description>
+	<inceptionYear>2017</inceptionYear>
 
 	<properties>
 		<sonar.version>6.3</sonar.version> <!-- this 6.3 is only required to be compliant with SonarLint and it is required 

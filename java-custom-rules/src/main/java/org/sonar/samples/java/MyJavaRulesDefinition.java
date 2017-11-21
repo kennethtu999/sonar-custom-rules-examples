@@ -19,16 +19,14 @@
  */
 package org.sonar.samples.java;
 
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.Iterables;
-import com.google.common.io.Resources;
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Locale;
+
 import javax.annotation.Nullable;
+
 import org.apache.commons.lang.StringUtils;
 import org.sonar.api.rule.RuleStatus;
 import org.sonar.api.rules.RuleType;
@@ -40,6 +38,11 @@ import org.sonar.check.Cardinality;
 import org.sonar.plugins.java.Java;
 import org.sonar.squidbridge.annotations.RuleTemplate;
 
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.Iterables;
+import com.google.common.io.Resources;
+import com.google.gson.Gson;
+
 /**
  * Declare rule metadata in server repository of rules. 
  * That allows to list the rules in the page "Rules".
@@ -49,7 +52,7 @@ public class MyJavaRulesDefinition implements RulesDefinition {
   // don't change that because the path is hard coded in CheckVerifier
   private static final String RESOURCE_BASE_PATH = "/org/sonar/l10n/java/rules/squid";
 
-  public static final String REPOSITORY_KEY = "mycompany-java";
+  public static final String REPOSITORY_KEY = "TWIBM-java";
 
   private final Gson gson = new Gson();
 
@@ -57,7 +60,7 @@ public class MyJavaRulesDefinition implements RulesDefinition {
   public void define(Context context) {
     NewRepository repository = context
       .createRepository(REPOSITORY_KEY, Java.KEY)
-      .setName("MyCompany Custom Repository");
+      .setName("TWIBM Custom Repository");
 
     List<Class> checks = RulesList.getChecks();
     new RulesDefinitionAnnotationLoader().load(repository, Iterables.toArray(checks, Class.class));
